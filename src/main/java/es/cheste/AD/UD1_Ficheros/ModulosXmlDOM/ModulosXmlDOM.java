@@ -1,4 +1,4 @@
-package es.cheste.UD1_Ficheros.ModulosXmlDOM;
+package es.cheste.AD.UD1_Ficheros.ModulosXmlDOM;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;

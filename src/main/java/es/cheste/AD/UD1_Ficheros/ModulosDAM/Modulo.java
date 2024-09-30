@@ -1,13 +1,13 @@
-package es.cheste.UD1_Ficheros.ModulosDAM_CSV;
+package es.cheste.AD.UD1_Ficheros.ModulosDAM;
 
 import java.util.Objects;
 
-public class ModuloCSV {
+public class Modulo {
     private String nombre;
     private int horas;
     private double notas;
 
-    public ModuloCSV(String nombre, int horas, double notas) {
+    public Modulo(String nombre, int horas, double notas) {
         this.nombre = nombre;
         this.horas = horas;
         this.notas = notas;
@@ -41,8 +41,8 @@ public class ModuloCSV {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ModuloCSV moduloCSV = (ModuloCSV) o;
-        return Objects.equals(nombre, moduloCSV.nombre);
+        Modulo modulo = (Modulo) o;
+        return Objects.equals(nombre, modulo.nombre);
     }
 
     @Override
