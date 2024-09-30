@@ -1,0 +1,12 @@
+Accés a Dades ->  horas: 6, nota: 8.45
+------------------------------------------------------------------
+Programació de serveis i processos ->  horas: 3, nota: 9.0
+------------------------------------------------------------------
+Desenvolupament d'interfícies ->  horas: 6, nota: 8.0
+------------------------------------------------------------------
+Programació Multimédia i dispositiud mòbils ->  horas: 5, nota: 7.34
+------------------------------------------------------------------
+Sistemes de Gestió Empresarial ->  horas: 5, nota: 8.2
+------------------------------------------------------------------
+Empresa i iniciativa emprenedora ->  horas: 3, nota: 7.4
+------------------------------------------------------------------
