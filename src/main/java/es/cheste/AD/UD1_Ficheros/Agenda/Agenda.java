@@ -7,7 +7,7 @@ public class Agenda {
     private List<Contacto> agenda;
 
     public Agenda() {
-        agenda = new ArrayList<Contacto>();
+        super();
     }
     public List<Contacto> getAgenda() {
         return agenda;

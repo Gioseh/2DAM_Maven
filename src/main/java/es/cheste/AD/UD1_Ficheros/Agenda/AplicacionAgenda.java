@@ -4,10 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import java.util.Scanner;
+import java.util.*;
 
 public class AplicacionAgenda {
 
@@ -17,6 +14,7 @@ public class AplicacionAgenda {
 
     public static void main(String[] args) {
         Agenda agenda = new Agenda();
+        //List<Contacto> contactos = leerFicheros();
         menuIdioma();
         menuAgenda();
     }
@@ -56,10 +54,57 @@ public class AplicacionAgenda {
                 "\n(4) -> " + propiedades.get(5) +
                 "\n(5) -> " + propiedades.get(6) +
                 "\n(6) -> " + propiedades.get(7));
+        String opcionMenuAgenda = sc.nextLine();
+
+
+        switch (opcionMenuAgenda) {
+            case "1":
+                guardarContacto();
+                break;
+            case "2":
+                modificarContacto();
+                break;
+            case "3":
+                eliminarContacto();
+                break;
+            case "4":
+                buscarContacto();
+                break;
+            case "5":
+                mostrarContactos();
+                break;
+            case "6":
+                cerrarApp();
+                break;
+        }
+    }
+
+    private static void cerrarApp() {
+    }
+
+    private static void mostrarContactos() {
+    }
+
+    private static void buscarContacto() {
+    }
+
+    private static void eliminarContacto() {
+    }
+
+    private static void modificarContacto() {
+    }
+
+    private static void guardarContacto() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Usted está creando un contacto, para ello tendrá que adjuntar los datos con el siguiente formato:\n" +
+                "(Nombre;Apellidos;Telefono1;Telefono2;Dirección)\n(En caso de querer solo 1 telefono tendrá que dejarlo en blanco Telefono1;;Dirección");
+        String lineaContacto = sc.nextLine();
+        String datosContacto = Arrays.toString(lineaContacto.split(";"));
+
     }
 
     public static void leerPropiedades() {
-        try(InputStream input = new FileInputStream(filePath)) {
+        try (InputStream input = new FileInputStream(filePath)) {
 
             idioma.load(input);
 
