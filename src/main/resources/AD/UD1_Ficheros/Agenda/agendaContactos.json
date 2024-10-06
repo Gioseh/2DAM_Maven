@@ -1,0 +1,74 @@
+[
+  {
+    "nombre": "Carlos",
+    "apellidos": "González Pérez",
+    "email": "carlos.gp@gmail.com",
+    "telefono1": "+34 912345678",
+    "telefono2": "+34 622345678",
+    "direccion": "Calle Mayor 12, Madrid"
+  },
+  {
+    "nombre": "Laura",
+    "apellidos": "Martínez López",
+    "email": "laura.ml@outlook.com",
+    "telefono1": "+34 913456789",
+    "telefono2": "+34 633456789",
+    "direccion": "Av. de la Paz 45, Valencia"
+  },
+  {
+    "nombre": "José",
+    "apellidos": "Fernández Ruiz",
+    "email": "josefr@gmail.com",
+    "telefono1": "+34 914567890",
+    "telefono2": "+34 644567890",
+    "direccion": "Calle del Sol 89, Barcelona"
+  },
+  {
+    "nombre": "Ana",
+    "apellidos": "García Sánchez",
+    "email": "ana.gs@hotmail.com",
+    "telefono1": "+34 915678901",
+    "telefono2": "+34 655678901",
+    "direccion": "Plaza del Carmen 23, Sevilla"
+  },
+  {
+    "nombre": "Miguel",
+    "apellidos": "Rodríguez Torres",
+    "email": "miguel.rt@yahoo.com",
+    "telefono1": "+34 916789012",
+    "telefono2": "+34 666789012",
+    "direccion": "Calle Larga 67, Bilbao"
+  },
+  {
+    "nombre": "María",
+    "apellidos": "Hernández Castro",
+    "email": "mariahc@gmail.com",
+    "telefono1": "+34 917890123",
+    "telefono2": "+34 677890123",
+    "direccion": "Av. Libertad 5, Zaragoza"
+  },
+  {
+    "nombre": "Luis",
+    "apellidos": "Jiménez Gómez",
+    "email": "luisjg@outlook.es",
+    "telefono1": "+34 918901234",
+    "telefono2": "+34 688901234",
+    "direccion": "Calle Real 34, Málaga"
+  },
+  {
+    "nombre": "Beatriz",
+    "apellidos": "López Morales",
+    "email": "bea.lopez@yahoo.es",
+    "telefono1": "+34 919012345",
+    "telefono2": "+34 699012345",
+    "direccion": "Paseo de Gracia 11, Barcelona"
+  },
+  {
+    "nombre": "David",
+    "apellidos": "Santos Martínez",
+    "email": "david.santos@gmail.com",
+    "telefono1": "+34 910123456",
+    "telefono2": "+34 600123456",
+    "direccion": "Calle del Prado 101, Madrid"
+  }
+]

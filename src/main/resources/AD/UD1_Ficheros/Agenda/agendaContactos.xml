@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<agenda>
+    <contacto>
+        <nombre>Carlos</nombre>
+        <apellidos>González Pérez</apellidos>
+        <email>carlos.gp@gmail.com</email>
+        <telefono1>carlos.gp@gmail.com</telefono1>
+        <telefono2>+34 622345678</telefono2>
+        <dirección>carlos.gp@gmail.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>Laura</nombre>
+        <apellidos>Martínez López</apellidos>
+        <email>laura.ml@outlook.com</email>
+        <telefono1>laura.ml@outlook.com</telefono1>
+        <telefono2>+34 633456789</telefono2>
+        <dirección>laura.ml@outlook.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>José</nombre>
+        <apellidos>Fernández Ruiz</apellidos>
+        <email>josefr@gmail.com</email>
+        <telefono1>josefr@gmail.com</telefono1>
+        <telefono2>+34 644567890</telefono2>
+        <dirección>josefr@gmail.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>Ana</nombre>
+        <apellidos>García Sánchez</apellidos>
+        <email>ana.gs@hotmail.com</email>
+        <telefono1>ana.gs@hotmail.com</telefono1>
+        <telefono2>+34 655678901</telefono2>
+        <dirección>ana.gs@hotmail.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>Miguel</nombre>
+        <apellidos>Rodríguez Torres</apellidos>
+        <email>miguel.rt@yahoo.com</email>
+        <telefono1>miguel.rt@yahoo.com</telefono1>
+        <telefono2>+34 666789012</telefono2>
+        <dirección>miguel.rt@yahoo.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>María</nombre>
+        <apellidos>Hernández Castro</apellidos>
+        <email>mariahc@gmail.com</email>
+        <telefono1>mariahc@gmail.com</telefono1>
+        <telefono2>+34 677890123</telefono2>
+        <dirección>mariahc@gmail.com</dirección>
+    </contacto>
+    <contacto>
+        <nombre>Luis</nombre>
+        <apellidos>Jiménez Gómez</apellidos>
+        <email>luisjg@outlook.es</email>
+        <telefono1>luisjg@outlook.es</telefono1>
+        <telefono2>+34 688901234</telefono2>
+        <dirección>luisjg@outlook.es</dirección>
+    </contacto>
+    <contacto>
+        <nombre>Beatriz</nombre>
+        <apellidos>López Morales</apellidos>
+        <email>bea.lopez@yahoo.es</email>
+        <telefono1>bea.lopez@yahoo.es</telefono1>
+        <telefono2>+34 699012345</telefono2>
+        <dirección>bea.lopez@yahoo.es</dirección>
+    </contacto>
+    <contacto>
+        <nombre>David</nombre>
+        <apellidos>Santos Martínez</apellidos>
+        <email>david.santos@gmail.com</email>
+        <telefono1>david.santos@gmail.com</telefono1>
+        <telefono2>+34 600123456</telefono2>
+        <dirección>david.santos@gmail.com</dirección>
+    </contacto>
+</agenda>

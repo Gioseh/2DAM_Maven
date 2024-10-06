@@ -1,6 +1,6 @@
 package es.cheste.AD.UD1_Ficheros.Agenda;
 
-public class Contacto {
+public class Contacto implements Comparable<Contacto>{
     private String nombre;
     private String apellidos;
     private String email;
@@ -54,8 +54,14 @@ public class Contacto {
         this.direccion = direccion;
     }
 
+
     @Override
-    public String toString() {
+    public int compareTo(Contacto otroContacto) {
+        return this.nombre.compareTo(otroContacto.nombre);
+    }
+
+    @Override
+    public String toString() {//TODO
         return "Contacto{" +
                 "nombre='" + nombre + '\'' +
                 ", apellidos='" + apellidos + '\'' +
