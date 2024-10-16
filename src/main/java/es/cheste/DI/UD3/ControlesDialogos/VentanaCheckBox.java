@@ -1,4 +1,4 @@
-package es.cheste.DI.JLabel;
+package es.cheste.DI.UD3.ControlesDialogos;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,15 +11,15 @@ public class VentanaCheckBox extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3,1));
 
-        JCheckBox op1 = new JCheckBox();
-        op1.add(new Label("1"));
-        op1.setSelected(true);
+        JCheckBox op1 = new JCheckBox("Opción 1");
+        op1.setSelected(false);
 
-        JCheckBox op2 = new JCheckBox();
-        op2.add(new Label("2"));
+        JCheckBox op2 = new JCheckBox("Opcion 2");
+        op2.setSelected(false);
 
-        JCheckBox op3 = new JCheckBox();
-        op3.add(new Label("1"));
+        JCheckBox op3 = new JCheckBox("Opcion 3");
+        op3.setSelected(false);
+
         panel.add(op1);
         panel.add(op2);
         panel.add(op3);

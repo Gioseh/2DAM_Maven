@@ -1,9 +1,5 @@
 package es.cheste.DI.UD3.ControlesDialogos;
 
-import es.cheste.DI.JLabel.VentanaCheckBox;
-import es.cheste.DI.JLabel.VentanaMarco;
-import es.cheste.DI.JLabel.VentanaTextField;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -102,7 +98,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaRadioButton ventanaRadioButton = new VentanaRadioButton();
             }
         });
 
@@ -111,7 +107,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJList ventanaJList = new VentanaJList();
             }
         });
 
@@ -120,7 +116,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJScrollBar ventanaJScrollBar = new VentanaJScrollBar();
             }
         });
 

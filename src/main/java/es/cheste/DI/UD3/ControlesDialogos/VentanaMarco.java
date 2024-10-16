@@ -1,4 +1,4 @@
-package es.cheste.DI.JLabel;
+package es.cheste.DI.UD3.ControlesDialogos;
 
 import javax.swing.*;
 
