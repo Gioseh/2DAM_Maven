@@ -14,8 +14,7 @@ import java.io.IOException;
 
 public class ModulosXmlDOM {
 
-    final static String RUTA_FICHERO_XML = "src/main/resources/UD1_Ficheros/ModulosXmlDOM/modulosSergio.xml";
-
+    final static String RUTA_FICHERO_XML = "src/main/resources/AD/UD1_Ficheros/ModulosXmlDOM/modulosSergio.xml";
     final static String[] MODULOS = {"Accés a Dades", "Programació de serveis i processos", "Desenvolupament d'interfícies", "Programació Multimédia i dispositiud mòbils", "Sistemes de Gestió Empresarial", "Empresa i iniciativa emprenedora"};
     final static int[] HORAS = {6, 3, 6, 5, 5, 3};
     final static double[] NOTAS = {8.45, 9.0, 8.0, 7.34, 8.2, 7.4};
@@ -23,13 +22,12 @@ public class ModulosXmlDOM {
     public static void main(String[] args) {
 
         crearFicheroXml();
-        leerFicheroXml();
-
+        leerXML();
 
     }
 
-    private static void leerFicheroXml() {
 
+    public static void leerXML() {
         try {
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -42,53 +40,36 @@ public class ModulosXmlDOM {
 
             for (int i = 0; i < listaModulos.getLength(); i++) {
 
-                Node modulo = listaModulos.item(i);
+                Element element = (Element) listaModulos.item(i);
+
                 StringBuilder sb = new StringBuilder();
 
-                if (modulo.getNodeType() == Node.ELEMENT_NODE) {
+                sb.append(element.getNodeName());
+                sb.append("Nom: " + element.getElementsByTagName("nombre").
+                        item(0).getFirstChild().getNodeValue() + "\n");
 
-                    Element element = (Element) modulo;
-                    NodeList hijos = element.getChildNodes();
+                sb.append("Hores: " + element.getElementsByTagName("horasMod")
+                        .item(0).getFirstChild().getNodeValue() + "\n");
 
-                    for (int j = 0; j < hijos.getLength(); j++) {
+                sb.append("Notas: " + element.getElementsByTagName("calificacion")
+                        .item(0).getFirstChild().getNodeValue() + "\n");
 
-                        Node hijo = hijos.item(j);
+                sb.append("---------------------------------------------------\n");
 
-                        if (hijo.getNodeType() == Node.ELEMENT_NODE) {
 
-                            Element hijoElement = (Element) hijo;
-
-                            switch (j) {
-                                case 0:
-                                    sb.append("---------------------------------------------------\n");
-                                    break;
-                                case 1:
-                                    sb.append("\nhoras: ");
-                                    break;
-                                case 2:
-                                    sb.append("\nnotas: ");
-                                    break;
-                            }
-
-                            sb.append(hijoElement.getTextContent());
-
-                        }
-                    }
-
-                    System.out.println(sb.toString());
-
-                }
+                System.out.println(sb.toString());
 
             }
 
-
-        } catch (ParserConfigurationException | SAXException | IOException e) {
+        } catch (ParserConfigurationException | SAXException |
+                 IOException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
 
 
     }
+
 
     public static void crearFicheroXml() {
 
@@ -129,6 +110,7 @@ public class ModulosXmlDOM {
             Result result = new StreamResult(new File(RUTA_FICHERO_XML));
 
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
 
         } catch (ParserConfigurationException | TransformerException e) {

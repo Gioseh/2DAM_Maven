@@ -17,7 +17,8 @@ public class JBDC_create_table {
     public static void main(String[] args) {
 
         ConexionBD conexion = new ConexionBD();
-        crearTablaEmpresa(conexion);
+        //crearTablaEmpresa(conexion); //Crea la tabla empresa
+        insertarClientes(conexion);  //Inserta los empleados
         conexion.desconectar();
     }
 
@@ -30,32 +31,21 @@ public class JBDC_create_table {
             return;
         }
 
-        try (Statement stmt = conexion.getConnection().createStatement();){
-            ResultSet rs = stmt.executeQuery(sql); //TODO cambiar el executeQuery por un executeUpdate
-            while (rs.next()) {
-                System.out.println("Empleado: " + rs.getString("first_name") + " " + rs.getString("last_name"));
-            }
+        try (Statement stmt = conexion.getConnection().createStatement()){
+
+            stmt.execute(sql);
+
         } catch (Exception e) {
             LOGGER.error("Error al consultar empleados", e);
         }
     }
 
     private static void insertarClientes(ConexionBD conexion) {
-        Properties properties = new Properties();
-        try {
-            properties.load(new FileInputStream(new File(FILENAME)));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
-        String url = properties.getProperty("db.url");
-        String user = properties.getProperty("db.user");
-        String password = properties.getProperty("db.pass");
 
-        try(Connection c = DriverManager.getConnection(url,properties);
-        Statement s = c.createStatement()) {
+        try(Statement stmt = conexion.getConnection().createStatement()) {
 
-            int nFil = s.executeUpdate(
+            int nFil = stmt.executeUpdate(
                     "INSERT INTO CLIENTES (DNI, APELLIDOS, CP) VALUES " +
                             "('78901234X','NADALES','44126'), " +
                             "('89012345E','HOJAS',NULL), " +
