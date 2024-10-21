@@ -125,7 +125,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJSlider ventanaJSlider = new VentanaJSlider();
             }
         });
 
@@ -134,7 +134,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJProgressBar ventanaJProgressBar = new VentanaJProgressBar();
             }
         });
 
@@ -143,7 +143,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJFileChooser ventanaJFileChooser = new VentanaJFileChooser();
             }
         });
 
@@ -152,7 +152,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaJColorChooser ventanaJColorChooser = new VentanaJColorChooser();
             }
         });
 
@@ -161,7 +161,7 @@ public class Ventana extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaTimer ventanaTimer = new VentanaTimer();
             }
         });
 

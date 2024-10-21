@@ -30,7 +30,7 @@ public class Agenda {
     }
 
     @Override
-    public String toString() {//TODO
+    public String toString() {
         return "Agenda{" +
                 "agenda=" + agenda +
                 '}';
