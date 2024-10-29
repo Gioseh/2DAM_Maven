@@ -72,31 +72,7 @@ public class Componentes extends JFrame {
             }
         });
 
-        ActionListener al = new ActionListener(){
-            public void actionPerformed(ActionEvent evt){
-                Object item = evt.getSource();
-                if(item == jmItemAbrir){
-                    jmItemAbrirActionPerformed(evt);
-                }
-                if(item == jmItemGuardar){
-                    jmItemGuardarActionPerformed(evt);
-                }
-                if (item == jmItemOtroNombre){
-                    //jmItemOtroNombreActionPerformed(evt);
-                }
-                if (item == jmItemSalir){
-                    jmItemSalirActionPerformed(evt);
-                }
-            }
-        };
 
-        //-------------------- AÑADIMOS LOS ACTIONLISTERS A LOS ITEMS ----------
-
-        jmItemAbrir.addActionListener(al);
-        jmItemGuardar.addActionListener(al);
-        jmItemSalir.addActionListener(al);
-
-        jmItemAbrir.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.CTRL_MASK));
 
         jBarraDeEstado = new JPanel();
         jetbarestPpal = new JLabel();
@@ -134,7 +110,40 @@ public class Componentes extends JFrame {
 
 
 
+        ActionListener al = new ActionListener(){
+            public void actionPerformed(ActionEvent evt){
+                Object item = evt.getSource();
+                if(item == jmItemAbrir || item == jbtbarAbrir){
+                    jmItemAbrirActionPerformed(evt);
+                }
+                if(item == jmItemGuardar || item == jbtbarGuardar){
+                    jmItemGuardarActionPerformed(evt);
+                }
+                if (item == jmItemOtroNombre){
+                    //jmItemOtroNombreActionPerformed(evt);
+                }
+                if (item == jmItemSalir){
+                    jmItemSalirActionPerformed(evt);
+                }
+            }
+        };
 
+        addComponentListener(new ComponentAdapter(){
+            public void componentResized(ComponentEvent evt){
+                ajustarComponentes(getWidth());
+                System.out.println(getWidth());
+            }
+        });
+
+        //-------------------- AÑADIMOS LOS ACTIONLISTERS A LOS ITEMS ----------
+
+        jmItemAbrir.addActionListener(al);
+        jmItemGuardar.addActionListener(al);
+        jmItemSalir.addActionListener(al);
+        jbtbarAbrir.addActionListener(al);
+        jbtbarGuardar.addActionListener(al);
+
+        jmItemAbrir.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.CTRL_MASK));
 
 
     }
@@ -153,5 +162,13 @@ public class Componentes extends JFrame {
 
     private void exitForm(WindowEvent evt) {
         System.exit(0);
+    }
+
+    private void ajustarComponentes(int anchura){
+
+        jBarraDeEstado.setPreferredSize(new Dimension(anchura, 40));
+        jtbarBarraDeHerr.setPreferredSize(new Dimension(anchura, 40));
+        jBarraDeEstado.revalidate();
+        jtbarBarraDeHerr.revalidate();
     }
 }
