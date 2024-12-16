@@ -1,9 +1,10 @@
-package es.cheste.PSP.UD2.Ejercicios.SumarNumeros;
+package es.cheste.PSP.UD2.Ejercicios.Entregables.ControlErroresValidacion;
 
-import java.io.*;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 
-public class LanzadorProcesos {
+public class Lanzador {
 
     public void ejecutar(String ruta) {
         ProcessBuilder pb;
@@ -38,8 +39,9 @@ public class LanzadorProcesos {
     public static void main(String[] args) {
 
 
-        LanzadorProcesos lp = new LanzadorProcesos();
+        Lanzador lp = new Lanzador();
         lp.ejecutar("Sumador.java");
         System.out.println("Finalizado");
     }
+
 }
